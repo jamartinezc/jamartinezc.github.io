@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hello world!</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="js/d3/d3.js"></script>
+    </head>
+    <body>
+        <div>It works!</div>
+        <div id="viz"></div>
+        <script type="text/javascript">
+
+            var sampleSVG = d3.select("#viz")
+                    .append("svg")
+                    .attr("width", 100)
+                    .attr("height", 100);
+
+            sampleSVG.append("circle")
+                    .style("stroke", "gray")
+                    .style("fill", "white")
+                    .attr("r", 40)
+                    .attr("cx", 50)
+                    .attr("cy", 50)
+                    .transition()
+                    .delay(100)
+                    .duration(1000)
+                    .attr("r", 10)
+                    .attr("cx", 30)
+                    .style("fill", "black");
+
+        </script>
+    </body>
+</html>
